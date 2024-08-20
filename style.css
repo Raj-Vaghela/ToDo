@@ -1,0 +1,123 @@
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #162447;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: transparent; /* Remove background from buttons */
+    color: #e94560;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: -1;
+}
+
+button i {
+    pointer-events: none; /* Prevent icons from blocking button clicks */
+}
+
+button:hover {
+    color: #d7234f;
+    z-index: 1;
+}
+
+#todos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#checkBox{
+    margin-right:10px;
+}
+
+.todo-item {
+    background-color: #1f4068;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow to handle text truncation */
+}
+
+.todo-item:hover {
+    transform: scale(1.02);
+    background-color: #253d6b;
+}
+
+.todo-item h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 16px;
+    text-align: left; /* Align text to the left */
+    color: #ffffff;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    max-width: 200px; /* Set a fixed width for the text item */
+    transition: max-width 0.3s ease;
+}
+
+.todo-item:hover h1 {
+    max-width: none; /* Allow full text to be visible on hover */
+    white-space: normal; /* Allow text to wrap */
+}
+
+button {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.edit-button, .save-button {
+    margin-left: 10px;
+    padding: 8px;
+}
+
+.save-button {
+    display: none;
+}
+
+.editing {
+    border: 2px solid #e94560;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #162447;
+}
